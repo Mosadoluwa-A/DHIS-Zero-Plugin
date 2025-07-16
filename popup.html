@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DHIS2 Auto Filler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 320px;
+      padding: 10px;
+    }
+    select, button {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding: 6px;
+    }
+    #preview {
+      font-family: monospace;
+      font-size: 12px;
+      background: #f9f9f9;
+      padding: 6px;
+      border: 1px solid #ccc;
+      height: 150px;
+      overflow: auto;
+      white-space: pre-wrap;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Auto Fill Tables</h1>
+
+  <label for="sectionSelect">Select Sections:</label>
+  <select id="sectionSelect" multiple size="7">
+    <option value="dst">DST Summary Form</option>
+    <option value="drtb">DRTB</option>
+    <option value="tpt">TPT Completion</option>
+    <option value="txsuccess">Treatment Success</option>
+    <option value="contact">Contact Investigation</option>
+    <option value="tbhiv">TB/HIV</option>
+  </select>
+
+  <button id="tagBtn">Tag Tables</button>
+  <button id="previewBtn">Preview Code</button>
+  <button id="runBtn">Run on Page</button>
+
+  <div id="preview"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+<!-- File: popup.js -->
